@@ -1,1 +1,0 @@
-# adamfathur.github.io
