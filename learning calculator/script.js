@@ -124,6 +124,9 @@ switch (value) {
     case 'kuad':
     kuad(value);
     break;
+    case 'sqrt':
+    sqrt(value);
+    break;
   case '.':
     inputDecimal(value);
     break;
