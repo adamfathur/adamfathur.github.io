@@ -37,10 +37,9 @@ include '../koneksi.php';
             $no = 1;
             if (isset($_POST['search_data'])) {
                 $cari = $_POST['cari'];
-                $query = "select * from tb_mahasiswa where npm like '%$cari%'";
-                $query = "select * from tb_mahasiswa where nama like '%$cari%'";
+                $query = "select * from tb_mahasiswa where npm like '%$cari%' or nama like '%$cari%' or tempat_lahir like '%$cari%' or jenis_kelamin like '%$cari%' or  alamat like '%$cari%' or kode_pos like '%$cari%'";
             } else {
-                $query = "select * from tb_mahasiswa  order by npm asc";
+                $query = "select * from tb_mahasiswa ";
             }
             $exe = mysqli_query($koneksi, $query);
             if (mysqli_num_rows($exe) > 0) {
